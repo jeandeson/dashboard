@@ -1,0 +1,25 @@
+.status {
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+.delivered{
+  background-color: #8de02c;
+}
+.pending{
+  background-color: #f9ca3f;
+}
+.return{
+  background-color: #f00;
+}
+.in-progress{
+  background-color: #1795ce;
+}
+span.status{
+  text-align: right;
+  font-weight: 900;
+}
+
+tr{
+  border-top: 1px solid red !important;
+}
