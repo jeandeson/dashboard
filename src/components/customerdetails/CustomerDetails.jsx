@@ -5,7 +5,6 @@ import axios from "../../plugins/axios";
 // import { useCustomersContext } from '../../contexts/customersContext';
 // import { DiAtom } from 'react-icons/di'
 // import { AiOutlineUser } from 'react-icons/ai'
-// import{GoDashboard} from 'react-icons/go'
 import "./CustomerDetails.css";
 const CustomerDetails = () => {
   const [customer, setCustomer] = useState();
