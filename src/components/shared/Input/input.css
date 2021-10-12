@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
 }
 
 .input{
@@ -21,4 +22,39 @@ textarea:focus, input:focus, select:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
-} 
+}
+
+.input-container .search-box{
+  position:absolute;
+  width: 380px;
+  padding: 5px;
+  color: var(--black2);
+  border: 1px solid var(--black2);
+  top: 6.5vh;
+  left: 9px;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: baseline;
+  background-color: white;
+}
+
+.show-search{
+  display: flex !important;
+}
+
+.search-box-info{
+  display: flex;
+  height: 60px;
+}
+.search-box-info img{
+  max-height: 50px;
+  max-width: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.search-box-info span{
+  align-self: center;
+  margin: 0 20px;
+}
+

@@ -2,21 +2,21 @@ import React from 'react';
 import './customerInfo.css'
 import InfoCard from './InfoCard'
 
-const CutomersInfo = ({customers, handleShowModal}) => {
-  return ( 
+const CutomersInfo = ({ customers, handleShowModal }) => {
+  return (
     <div className="customer-info-container">
-     <table>
+      <table>
         <thead>
-          <th  className="table-title">Recent Customers</th>
+          <th className="table-title">Recent Customers</th>
         </thead>
         <tbody>
           <tr>
-            {customers?.map(customer => <InfoCard key={customer?.id} customer={customer}  handleShowModal={handleShowModal} />)}
+            {customers?.map(customer => <InfoCard key={customer?.id} customer={customer} handleShowModal={handleShowModal} />)}
           </tr>
         </tbody>
-    </table>
+      </table>
     </div>
-   );
+  );
 }
- 
+
 export default CutomersInfo;

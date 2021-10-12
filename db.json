@@ -1,0 +1,218 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "image": "https://th.bing.com/th/id/R.8a51195c52d888f63754c4f559b642b6?rik=gcq7t11h4N6AxA&pid=ImgRaw&r=0",
+      "name": "Alucca Santos",
+      "email": "Alucca@email.com",
+      "phone": "71-99695421"
+    },
+    {
+      "id": 2,
+      "image": "https://c.wallhere.com/photos/4c/8e/Cowboy_Bebop_Spike_Spiegel-284858.jpg!d",
+      "name": "Pedro Santos Oliveira",
+      "email": "Pedro@email.com",
+      "phone": "71-99695421"
+    },
+    {
+      "id": 3,
+      "image": "https://th.bing.com/th/id/R.1a3f5a8eaec44f62440163ad1b54f6a7?rik=you741QmPpC78g&pid=ImgRaw&r=0",
+      "name": "Matheus Costa",
+      "email": "Matheus@email.com",
+      "phone": "71-99695421"
+    },
+    {
+      "id": 4,
+      "image": "https://th.bing.com/th/id/OIP.4GP8CGTNOUq8NL7K6CerfgHaHa?pid=ImgDet&rs=1",
+      "name": "Jacinto Pinto",
+      "email": "@jacinto@email.com",
+      "phone": "71-99695421"
+    },
+    {
+      "id": 5,
+      "image": "https://th.bing.com/th/id/OIP.B9iqG4uZgljyky12kklDcAHaEK?pid=ImgDet&rs=1",
+      "name": "Kuririn Super Saiyajin",
+      "email": "Kuririn@email.com",
+      "phone": "71-99695421"
+    },
+    {
+      "id": 6,
+      "image": "https://pm1.narvii.com/6964/141730b1fd8a6e44d8f9085d43f5aabc1f375ab1r1-1280-720v2_hq.jpg",
+      "name": "Kacchan Bola de Fogo",
+      "email": "Kacchan@email.com",
+      "phone": "71-99695421"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "name": "Arduino",
+      "price": 1450,
+      "payment": "paid",
+      "status": "delivered"
+    },
+    {
+      "id": 2,
+      "name": "Computer",
+      "price": 2150,
+      "payment": "paid",
+      "status": "return"
+    },
+    {
+      "id": 3,
+      "name": "Notebook",
+      "price": 4450,
+      "payment": "paid",
+      "status": "in-progress"
+    },
+    {
+      "id": 4,
+      "name": "Celphone",
+      "price": 4550,
+      "payment": "paid",
+      "status": "delivered"
+    },
+    {
+      "id": 5,
+      "name": "Refrigerator",
+      "price": 7450,
+      "payment": "paid",
+      "status": "return"
+    },
+    {
+      "id": 6,
+      "name": "Freezer",
+      "price": 3600,
+      "payment": "paid",
+      "status": "delivered"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "customerID": 1,
+      "content": "Hellow daddy, want some fun?",
+      "date": "9 hours ago",
+      "replies": [
+        {
+          "id": 1,
+          "managerID": 1,
+          "content": "Yes honney"
+        },
+        {
+          "id": 2,
+          "managerID": 2,
+          "content": "Things will get hot here"
+        },
+        {
+          "id": 3,
+          "managerID": 1,
+          "content": "Get out"
+        },
+        {
+          "managerID": 1,
+          "content": "asdas"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customerID": 2,
+      "content": "Whatever happens, happens",
+      "date": "12 hours ago",
+      "replies": [
+        {
+          "id": 1,
+          "managerID": 1,
+          "content": "Sad Boy :'("
+        },
+        {
+          "managerID": 1,
+          "content": "12312"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customerID": 3,
+      "content": "I hate rocks, dammit",
+      "date": "13 hours ago",
+      "replies": [
+        {
+          "id": 1,
+          "managerID": 2,
+          "content": "Me too my friend"
+        },
+        {
+          "managerID": 1,
+          "content": "12312"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "customerID": 4,
+      "content": "Hello nee-san, i have some things for you",
+      "date": "16 hours ago",
+      "replies": [
+        {
+          "id": 1,
+          "managerID": 1,
+          "content": "Hehehe, nice day to me"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "customerID": 5,
+      "content": "Plus ultra!!!!!",
+      "date": "17 hours ago",
+      "replies": [
+        {
+          "id": 1,
+          "managerID": 2,
+          "content": "Whathell is that?"
+        }
+      ]
+    },
+    {
+      "content": "Agora sim porra",
+      "managerID": 1,
+      "date": "12 hours ago",
+      "id": 6
+    },
+    {
+      "content": "12312",
+      "managerID": 1,
+      "date": "12 hours ago",
+      "id": 7
+    }
+  ],
+  "statistics": [
+    {
+      "id": 1,
+      "views": 1540,
+      "comments": 1250,
+      "sales": 1720,
+      "earnings": 2698
+    }
+  ],
+  "managers": [
+    {
+      "id": 1,
+      "type": "manager",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSunoRtKs_5C8GXODJrCni_MUAv_5Gr7IT4nPY26vt-Em25496hYo_LKKs9galktO1ForA&usqp=CAU",
+      "name": "Jeandeson Nascimento",
+      "email": "jeandeson.souza@bol.com.br",
+      "password": "batatinha123"
+    },
+    {
+      "id": 2,
+      "type": "manager",
+      "image": "https://criticalhits.com.br/wp-content/uploads/2021/07/EvcizDkWQAABXn3.jpg",
+      "name": "José Alfreido Nascimento",
+      "email": "José.Alfreido@gmail",
+      "password": "batatinha123"
+    }
+  ]
+}

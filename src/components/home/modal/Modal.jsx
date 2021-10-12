@@ -3,9 +3,10 @@ import './Modal.css'
 
 const Modal = props => {
   const {showModal, modalRef, infoCustomer, closeModal} = props;
+  
 
   return ( 
-    <div ref={modalRef} className={`${showModal} modal-container`}>
+    <div onClick={closeModal} ref={modalRef} className={`${showModal} modal-container`}>
       <div className="modal-item">
         <div className="modal-img">
             <img src={`${infoCustomer?.image}`} alt="" />
@@ -17,8 +18,12 @@ const Modal = props => {
              <span>{infoCustomer?.name}</span>
             </div>
             <div>
+             <span>Email: </span>
+             <span>{infoCustomer?.email}</span>
+            </div>
+            <div>
              <span>Contact: </span>
-             <span>ElizSantos@gmail.com</span>
+             <span>{infoCustomer?.phone}</span>
             </div>
             <div className="modal-button">
              <button  onClick={closeModal}>close</button>

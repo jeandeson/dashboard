@@ -42,7 +42,7 @@ const Nav = props => {
             <RiLockPasswordLine className="icon"/>
             <span><strong>Password</strong></span>
         </div>
-        <div className="nav-item-container">
+        <div onClick={localStorage.removeItem("account")} className="nav-item-container">
             <VscSignOut className="icon"/>
             <span><strong>Signout</strong></span>
         </div>

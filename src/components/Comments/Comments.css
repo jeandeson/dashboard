@@ -1,0 +1,293 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font: normal 13px sans-serif;
+}
+
+.comment-section{
+  list-style: none;
+  max-width: 800px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+
+
+.comment{
+  display: flex;
+  border-radius: 3px;
+  flex-wrap: wrap;
+}
+
+.adm-svg {
+  font-size: 20px;
+  vertical-align: text-bottom ;
+  color: rgba(255, 217, 0, 0.822) ;
+}
+
+.comment.user-comment{
+  color:  var(--white);
+}
+li.comment.user-comment.reply{
+  width: 100%;
+  justify-content: right;
+  margin: 5px auto;
+}
+
+.comment.user-comment.variant{
+  flex-direction: row-reverse;
+}
+
+.comment.author-comment{
+  color:  #60686d;
+  justify-content: flex-end;
+}
+
+.comment .info{
+  width: 17%;
+}
+.comment .info.variant{
+  width: 17%;
+  text-align: left !;
+}
+
+.comment.user-comment div.info.variant {
+  text-align: left;
+}
+
+.comment.author-comment .info{
+  order: 3;
+}
+
+
+.comment .info a{	
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0 3px 0;
+}
+
+.comment .info span{
+  font-size: 11px;
+  color: var(--black2);
+  vertical-align: middle;
+}
+
+
+.comment .avatar{
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+
+.comment.user-comment .avatar{
+  
+  margin: 0 20px 0px 10px;
+}
+
+.adm-img{
+  max-width: 50px;
+  max-height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.adm-img img{
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--black2);
+}
+
+.comment.author-comment .avatar{
+  order: 2;
+  padding: 10px 3px 0 18px;
+}
+
+.comment .avatar img{
+  min-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--black2);
+}
+
+.comment.user-comment .avatar img{
+  float: right;
+}
+
+.comment p{
+  line-height: 1.5;
+  padding: 18px 22px;
+  width: 50%;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.comment.user-comment p{
+  background-color:  var(--black2);
+}
+.comment.user-comment p.variant{
+  background-color:  var(--white);
+  color: var(--black1);
+  
+}
+
+.comment.author-comment p{
+  background-color:  var(--black2);
+  order: 1;
+}
+
+.user-comment p:after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color:var(--blue);
+  border: 2px solid #f3f3f3;
+  left: -8px;
+  top: 18px;
+}
+.user-comment p.variant:after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color:var(--grey);
+  border: 2px solid #f3f3f3;
+  left: -8px;
+  top: 18px;
+}
+
+.author-comment p:after{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #e2f8ff;
+  right: -8px;
+  top: 18px;
+}
+
+.write-new{
+  margin: 80px auto 0;
+  width: 50%;
+}
+
+.write-new textarea{
+  color:  #444;
+  font: inherit;
+
+  outline: 0;
+  border-radius: 3px;
+  border: 1px solid #cecece;
+  background-color:  #fefefe;
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.06);
+  overflow: auto;
+
+  width:100%;
+  min-height: 80px;
+  padding: 15px 20px;
+}
+
+.write-new img{
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.write-new button{
+  float:right;
+  background-color:  #87bae1;
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  border: 0;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 10px 25px;
+  margin-top: 18px;
+}
+
+/* replies */
+
+div.replies{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-bottom: 45px;
+  width: 45.5%;
+}
+div.replies button{
+  padding: 6px 15px;
+}
+
+
+@media (max-width: 800px){
+
+  .comment p{
+      width: 100%;
+  }
+
+  .comment.user-comment .info{
+      order: 3;
+      text-align: left;
+  }
+
+  .comment.user-comment .avatar{
+      order: 2;
+  }
+
+  .comment.user-comment p{
+      order: 1;
+  }
+ 
+  .comment.author-comment{
+      justify-content: flex-start;
+  }
+
+
+  .comment-section{
+      margin-top: 10px;
+  }
+
+  .comment .info{
+      width: auto;
+  }
+
+  .comment .info a{
+      padding-top: 15px;
+  }
+
+  .comment.user-comment .avatar,
+  .comment.author-comment .avatar{
+      padding: 15px 10px 0 18px;
+      width: auto;
+  }
+
+  .comment.user-comment p:after,
+  .comment.author-comment p:after{
+      width: 12px;
+      height: 12px;
+      top: initial;
+      left: 28px;
+      bottom: -6px;
+  }
+
+  .write-new{
+      width: 100%;
+  }
+}

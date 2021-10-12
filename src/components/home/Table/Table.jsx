@@ -7,7 +7,9 @@ const Table = ({orders}) => {
     <div className="flex-container">
     <table className="dash">
         <thead>
-          <th  className="table-title">Recent Orders</th>
+          <tr>
+            <th  className="table-title">Recent Orders</th>
+          </tr>
         </thead>
         <thead>
           <th>Name</th>
