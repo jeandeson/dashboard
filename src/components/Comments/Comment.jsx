@@ -1,5 +1,4 @@
 import React, { useEffect, useState, memo } from 'react';
-import {FaCrown} from "react-icons/fa"
 import Reply from "./Reply"
 import { useAccountContext } from '../../contexts/accountContexts';
 import { useCommentsContext } from '../../contexts/commentsContexts';

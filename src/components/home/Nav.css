@@ -1,22 +1,31 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .nav-container{
   position: relative;
 }
 
 .nav {
   height: 100vh;
-  width: 13vw;
+  width: 5vw;
   background-color: #287bff;
   display: flex;
   flex-direction: column;
   color: white;
-  left: -307px;
+  /* left: -307px; */
   padding-left: 10px;
   position: absolute;
   transition: all 1s ease-in-out;
 }
 
 .translate{
-  transform: translateX(300px);
+  width: 13vw;
 }
 
 .nav-item-container{
@@ -39,15 +48,39 @@
   color: var(--white);
   margin-bottom: 50px;
 
+  text-align: left;
 }
 
 .nav-item-container.header svg{
   font-size: 25px;
 }
 
+div.nav-item-container.brand{
+  height:50px;
+  margin: 25px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.nav-item-container.brand svg{
+  font-size:50px;
+  animation: rotation 5s infinite linear;
+}
+
+.nav-item-container span{
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.nav-item-container span.translate{
+  opacity: 1;
+}
+
 .icon{
   font-size: 25px;
-  margin-right: 25px;
+  min-width: 25px;
 }
 
 .title{

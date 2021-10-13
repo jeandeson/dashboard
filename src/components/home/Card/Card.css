@@ -23,12 +23,18 @@
   flex-direction: column;
   justify-content: center;
 }
+.card:hover{
+  background: var(--blue);
+  color: var(--white);
+}
+.card:hover span{
+  color: var(--white);
+}
 
 .card-item{
   display: flex;
   font-size: 30px;
   font-weight: 700;
-
 }
 
 .card span.card-info{

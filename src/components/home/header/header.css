@@ -1,3 +1,19 @@
 svg.svg-header{
   color: var(--black1) !important;
+  cursor: pointer;
+}
+
+.header .account-img-container{
+  max-width: 40px;
+  max-height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 100%;
+}
+.header .account-img-container img {
+  object-fit: cover;
+  max-width: 100%;
+  cursor: pointer;
 }
