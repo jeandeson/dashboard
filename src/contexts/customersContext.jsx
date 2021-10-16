@@ -6,15 +6,18 @@ const CustomersContext = createContext({});
 
 const CustomersProvider = ({ children }) => {
     const [customers, setCustomers] = useState([])
+    const [recentsCustomers, setRecentsCustomers] = useState([])
+
     useEffect(() => {
         (async function fetchCustomers() {
             const { data } = await axios.get("/customers")
             setCustomers(data)
+            setRecentsCustomers(data.slice(data.length - 6, data.length))
         })()
     }, [])
 
     return (
-        <CustomersContext.Provider value={{ customers }}>
+        <CustomersContext.Provider value={{ customers, recentsCustomers }}>
             {children}
         </CustomersContext.Provider>
     )

@@ -1,0 +1,20 @@
+.customers-list {
+  display: grid;
+  max-width: 80vw;
+  padding: 0 5%;
+  margin: 0 auto;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+  
+  list-style: none;
+  grid-gap: 1.5rem;
+}
+
+.customers-list img {
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}

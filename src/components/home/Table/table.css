@@ -1,16 +1,21 @@
 .flex-container{
-  display: flex;
-  justify-content: center;
   width: 100%;
+  margin-right: 20px;
 }
 table{
   width: 100%;
+  height: 100%;
+  border-radius: 20px;
   text-align: left;
-  padding: 20px;
-  border-radius: 25px;
+  padding: 30px;
   background-color: var(--white);
-  margin-right:20px ;
 }
+
+tfoot{
+  height: 20px;
+  position: relative;
+}
+
 
 table th, td{
   min-width: 100px;
@@ -18,9 +23,8 @@ table th, td{
   color: var(--black1);
 }
 
-table th.table-title{
+tr.table-title{
   font-size: 25px;
-  max-width: 5px;
   color: var(--blue);
 }
 

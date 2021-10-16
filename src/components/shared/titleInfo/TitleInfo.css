@@ -1,0 +1,6 @@
+thead.title-info tr{
+  background: white;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 18px;
+}

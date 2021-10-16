@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from "../Card/Card"
 import Infos from "../infos/Infos"
-
 import './dashBoard.css'
 
 

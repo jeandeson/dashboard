@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  z-index: 1;
 }
 
 .input{
@@ -25,18 +26,20 @@ textarea:focus, input:focus, select:focus {
 }
 
 .input-container .search-box{
-  position:absolute;
-  width: 380px;
+  position: absolute;
+  width: 360px;
   padding: 5px;
   color: var(--black2);
   border: 1px solid var(--black2);
-  top: 6.5vh;
-  left: 9px;
+  top: 49px;
+  left: 19px;
+  border-top: 0;
   display: none;
   justify-content: center;
   flex-direction: column;
   align-items: baseline;
   background-color: white;
+  z-index: 99999;
 }
 
 .show-search{

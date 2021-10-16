@@ -1,16 +1,51 @@
-import React from 'react';
-import './table.css'
+import React, { useEffect, useState } from 'react';
+import './Table.css'
 import Order from "./Order.jsx";
+import TitleInfo from "../../shared/titleInfo/TitleInfo"
+import Pagination from '../../pagination/Pagination';
+import axios from '../../../plugins/axios';
+import ReactPaginate from 'react-paginate';
+import './Pagination.css';
+import Loading from '../../loading/Loading';
+const LIMIT = 6;
 
-const Table = ({orders}) => {
+const Table = () => {
+  const [offSet, setOffset] = useState(0)
+  
+  const [orders, setOrders] = useState([]);
+  const [pageNumber, setPageNumber] = useState(0)
+  const pagesVisited = pageNumber * LIMIT;
+
+  const getInfo = (offset, pageNumber) => {
+    setPageNumber(pageNumber)
+    setOffset(offset)
+  }
+
+  const displayOrders = orders.slice(pagesVisited, pagesVisited + LIMIT).map((order) => <Order key={order.id} order={order}/>)
+  console.log(pagesVisited)
+  useEffect(() => {
+
+    const fetchOrders = async () => {
+      const { data } = await axios.get('orders')
+      setOrders(data)
+    }
+    fetchOrders()
+  }, [])
+
+  const pages = Math.ceil(orders.length / LIMIT);
+  const changePage = ({selected}) => {
+    setPageNumber(selected)
+  }
+  
+  if(displayOrders.length < 0) {
+      return <Loading type={`spin`} color={`var(--blue)`}/>
+  }
+
   return ( 
+     <>
     <div className="flex-container">
     <table className="dash">
-        <thead>
-          <tr>
-            <th  className="table-title">Recent Orders</th>
-          </tr>
-        </thead>
+    <TitleInfo>Recent Orders</TitleInfo>
         <thead>
           <th>Name</th>
           <th>Price</th>
@@ -18,10 +53,30 @@ const Table = ({orders}) => {
           <th>Status</th>
         </thead>
         <tbody>
-          { orders.map(order => <Order key={order.id} order={order}/>)}
+            {displayOrders}
         </tbody>
+          {/* {orders.length > 0 && (
+            <Pagination getInfo={getInfo} total={orders.length} limit={LIMIT} total={orders.length} offset={offSet}/>
+          )} */}
+          <tfoot>
+            <tr>
+              <ReactPaginate previousLabel="previos"
+                nextLabel="next"
+                pageRangeDisplayed={0}
+                pageCount={pages}
+                onPageChange={changePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+              />
+            </tr>
+          </tfoot>
     </table>
+    
     </div>
+     </>
     
    );
 }

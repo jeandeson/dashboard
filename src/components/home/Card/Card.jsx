@@ -15,6 +15,9 @@ const Card = props => {
   const toComments = () => {
     history.push("/comments")
   }
+  const toGraph = () => {
+    history.push("/graph")
+  }
   const {statitcs} = props
   return ( 
     <div className="container-card">
@@ -39,7 +42,7 @@ const Card = props => {
             </div>
             <span className="card-info">Comments</span>
         </div>
-        <div className="card">
+        <div onClick={toGraph} className="card">
           <div className="card-item">
                 <span>{ToCurrency(statitcs[0]?.earnings)}</span>
                 <GiMoneyStack/>

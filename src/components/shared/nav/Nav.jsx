@@ -7,9 +7,19 @@ import {FiSettings} from "react-icons/fi"
 import {RiLockPasswordLine} from "react-icons/ri"
 import {VscSignOut} from "react-icons/vsc"
 import {DiAtom} from "react-icons/di"
+import { useHistory } from 'react-router-dom'
 
 const Nav = props => {
+
+  const history = useHistory()
   const {translate, handleTranslate} = props
+
+  const toHome = () => {
+      history.push("/")
+  }
+  const toCustomers = () => {
+      history.push("/customers")
+  }
 
   return ( 
     <div className="nav-container">
@@ -17,11 +27,11 @@ const Nav = props => {
         <div  onClick={handleTranslate}  className="nav-item-container brand">
             <DiAtom className="icon"/>
         </div>
-        <div className="nav-item-container">
+        <div onClick={toHome} className="nav-item-container">
             <CgHome className="icon"/>
             <span className={`${translate}`}><strong>Home</strong></span>
         </div>
-        <div className="nav-item-container">
+        <div onClick={toCustomers} className="nav-item-container">
             <CgUserList className="icon"/>
             <span className={`${translate}`}><strong>Customers</strong></span>
         </div>

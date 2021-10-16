@@ -20,7 +20,7 @@
   color: white;
   /* left: -307px; */
   padding-left: 10px;
-  position: absolute;
+  position: fixed;
   transition: all 1s ease-in-out;
 }
 

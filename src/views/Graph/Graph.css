@@ -1,0 +1,43 @@
+.graph-container {
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 80vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.graph-wrapper{
+  width: 100%;
+  height: 65vh;
+  padding: 20px;
+  background-color: white;
+}
+.graph-wrapper{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.graph-wrapper + .graph-wrapper{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.graph-info{
+  height: 65vh;
+  background-color: white;
+  display: flex;
+  justify-content:center;
+  border-left: 1px solid #ccc;
+}
+.graph-info .graph-info-item{
+  width: 15vw;
+  min-width: 100px;
+}
+.graph-info .graph-info-item span{
+  color: var(--blue);
+  font-size: 25px;
+  font-weight: 700;
+}

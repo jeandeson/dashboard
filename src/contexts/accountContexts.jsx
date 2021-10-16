@@ -1,19 +1,22 @@
 import  {createContext, useContext, useState, useEffect} from 'react';
-// import ManagerService from '../services/ManagerService'
+import  Navigation  from "../components/shared/navigation/Navigation"
+import {useHistory} from 'react-router-dom'
 
 const AccountContext = createContext({
 
 })
 
 const AccountProvider = ({children}) => {
+
   const [account, setAccount] = useState(undefined)
 
   useEffect(() =>{
     async function isValidUser(){
       const isLogged = JSON.parse(localStorage.getItem("account"))
+      alert(isLogged)
       if(isLogged){
         setAccount(isLogged)
-        console.log("deu certo", isLogged)
+
       }
     }
     isValidUser()

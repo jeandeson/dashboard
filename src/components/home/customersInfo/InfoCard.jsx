@@ -1,14 +1,14 @@
 import React from 'react';
 import './customerInfo.css'
 
-const InfoCard = ({customer, handleShowModal}) => {
+const InfoCard = ({info}) => {
   return ( 
-    <td onClick={() => handleShowModal(customer)} className="info">
+    <td className="info">
       <div className="img-box">
-        <img src={customer?.image} alt="" />
+        <img src={info?.image} alt="" />
       </div>
       <div>
-        <span>{customer?.name}</span>
+        <span>{info?.name}</span>
       </div>
     </td>
    );
